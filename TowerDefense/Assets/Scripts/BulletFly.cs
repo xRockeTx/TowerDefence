@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 using UnityEngine.UIElements;
 
 public class BulletFly : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    public int damage;
+    public int damage, speed;
     private Transform target;
     private float coef;
 

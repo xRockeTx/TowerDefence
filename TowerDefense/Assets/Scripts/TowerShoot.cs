@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class TowerShoot : MonoBehaviour
 {
+    [SerializeField] private List<int> upSpeed, upDamage;
     [SerializeField] private List<int> upgradePrice;
     [SerializeField] private List<float> rangeTower, cooldownTower;
     [SerializeField] private List<string> tags;
@@ -14,7 +15,7 @@ public class TowerShoot : MonoBehaviour
     public UpgradeTower upTower;
     public Transform bullet;
     public float range, cooldown, currentCooldown;
-    public int price,tier=0;
+    public int price,tier=0,damage,speed;
 
     private void Update()
     {
@@ -59,13 +60,15 @@ public class TowerShoot : MonoBehaviour
         currentCooldown = cooldown;
         Transform tmpBullet = Instantiate(bullet);
         tmpBullet.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+        tmpBullet.GetComponent<BulletFly>().damage = damage;
+        tmpBullet.GetComponent<BulletFly>().speed = speed;
         tmpBullet.GetComponent<BulletFly>().SetTarget(enemy,coef[tagIndex]);
     }
     private void OnMouseDown()
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            upTower.OpenPan(price, upgradePrice, rangeTower, cooldownTower, tier, this);
+            upTower.OpenPan(price, upgradePrice,upSpeed,upDamage, rangeTower, cooldownTower, tier, this);
         }
     }
 }

@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class UpgradeTower : MonoBehaviour
 {
-    [SerializeField] private Text range, cooldown, level, damage,priceText;
+    [SerializeField] private Text range, cooldown, level, damage,priceText,speed;
     public GameObject upPan;
     private TowerShoot tower;
-    private List<int> upgradePrice;
+    private List<int> upgradePrice,bulletDamage,bulletSpeed;
     private List<float> towerRange,towerCooldown;
     private int price,tier;
     [SerializeField] private BuyOpen buyOpen;
@@ -41,7 +41,8 @@ public class UpgradeTower : MonoBehaviour
     {
         range.text = "Дальность: " + towerRange[lvl];
         cooldown.text = "Время перезарядки: " + towerCooldown[lvl];
-        damage.text = "Урон: " + tower.bullet.GetComponent<BulletFly>().damage;
+        damage.text = "Урон: "+ bulletDamage[lvl];
+        speed.text = "Скорость пули: " + bulletSpeed[lvl];
         level.text = "Уровень: " + lvl;
         if (tier + 1 < tower.transform.childCount) 
             priceText.text = "Стоимость: " + upgradePrice[tier+1];
@@ -59,14 +60,18 @@ public class UpgradeTower : MonoBehaviour
             tower.tier = tier;
             tower.range = towerRange[tier];
             tower.cooldown = towerCooldown[tier];
+            tower.damage = bulletDamage[tier];
+            tower.speed = bulletSpeed[tier];
             tower.transform.GetChild(tier).gameObject.SetActive(true);
         }
         upPan.SetActive(false);
     }
-    public void OpenPan(int price,List<int> upList,List<float> towerRange, List<float> cooldown, int tier,TowerShoot tower)
+    public void OpenPan(int price,List<int> upList, List<int> upSpeed, List<int> upDamage,List<float> towerRange, List<float> cooldown, int tier,TowerShoot tower)
     {
         this.price = price;
         upgradePrice = upList;
+        bulletSpeed = upSpeed;
+        bulletDamage = upDamage;
         this.towerRange = towerRange;
         towerCooldown = cooldown;
         this.tier = tier;

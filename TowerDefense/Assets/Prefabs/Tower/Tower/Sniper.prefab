@@ -303,6 +303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba06913894bc67449005f63b9ad7200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upSpeed: 0f0000000e0000000c0000001200000014000000
+  upDamage: 0a0000000e00000013000000190000001e000000
   upgradePrice: 1e00000032000000460000006400000096000000
   rangeTower:
   - 8
@@ -327,6 +329,8 @@ MonoBehaviour:
   currentCooldown: 0
   price: 30
   tier: 0
+  damage: 10
+  speed: 15
 --- !u!1 &6405777383545746980
 GameObject:
   m_ObjectHideFlags: 0

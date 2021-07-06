@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    [SerializeField] private GameObject winPanel;
     [SerializeField] private Transform waypointsParent;
     [SerializeField] private Text timeToNextSpawn;
     [SerializeField] private List<GameObject> enemy;
@@ -12,19 +13,29 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] private List<int> enemyCount;
     private int waveCount = 0;
     private float timeToSpawn = 4;
+    private bool win=false;
 
     private void Update()
     {
-        if (timeToSpawn <= 0)
+        if (!win)
         {
-            StartCoroutine(SpawnWave());
-            timeToSpawn = 4;
+            if (timeToSpawn <= 0)
+            {
+                StartCoroutine(SpawnWave());
+                timeToSpawn = 4;
+            }
+            timeToSpawn -= Time.deltaTime;
+            timeToNextSpawn.text = timeToSpawn.ToString();
         }
-        timeToSpawn -= Time.deltaTime;
-        timeToNextSpawn.text = timeToSpawn.ToString();
     }
     private IEnumerator SpawnWave()
     {
+        if (waveCount == enemyType.Count)
+        {
+            win = true;
+            //winPanel.SetActive(true);
+            yield break;
+        }
         for (int i = 0; i < enemyCount[waveCount]; i++)
         {
             Transform tmpEnemy = Instantiate(enemy[enemyType[waveCount]], transform).transform;

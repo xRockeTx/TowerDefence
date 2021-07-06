@@ -35,6 +35,6 @@ public class BuyOpen : MonoBehaviour
     public void ChangeMoney(int price)
     {
         money += price;
-        Start();
+        moneyTxt.text = money.ToString();
     }
 }

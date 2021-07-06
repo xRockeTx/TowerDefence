@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class BulletFly : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private int damage;
+    public int damage;
     private Transform target;
     private float coef;
 

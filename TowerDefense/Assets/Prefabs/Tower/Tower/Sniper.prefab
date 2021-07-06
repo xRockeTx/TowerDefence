@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a16de5bd11fc6c14e8036b453f3fbee3, type: 2}
+  - {fileID: 2100000, guid: e1406d51657a4d5428690517ae7a3787, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e6ab6acb7365afe4e9e459a4f6fc0010, type: 2}
+  - {fileID: 2100000, guid: e1406d51657a4d5428690517ae7a3787, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 1620989677896924539}
   - component: {fileID: 2560840078882779698}
   m_Layer: 0
-  m_Name: Tower1
+  m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -387,7 +387,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a16de5bd11fc6c14e8036b453f3fbee3, type: 2}
+  - {fileID: 2100000, guid: e1406d51657a4d5428690517ae7a3787, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -482,7 +482,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a16de5bd11fc6c14e8036b453f3fbee3, type: 2}
+  - {fileID: 2100000, guid: e1406d51657a4d5428690517ae7a3787, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -577,7 +577,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a16de5bd11fc6c14e8036b453f3fbee3, type: 2}
+  - {fileID: 2100000, guid: e1406d51657a4d5428690517ae7a3787, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

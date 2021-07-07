@@ -8,6 +8,7 @@ public class WalkEnemy : MonoBehaviour
 {
     [SerializeField] private int minHP, speed;
     [SerializeField] private Transform wayPointParent;
+    [SerializeField] private RotateEnemy rotate;
     private List<Transform> waypoints = new List<Transform>();
     private int index = 0;
     private float hp = 15;
@@ -30,6 +31,7 @@ public class WalkEnemy : MonoBehaviour
         {
             waypoints.Add(wayPointParent.GetChild(i));
         }
+        rotate.EnemyRotate(waypoints[index]);
     }
     private void Update()
     {
@@ -40,6 +42,8 @@ public class WalkEnemy : MonoBehaviour
             if (Vector3.Distance(transform.position,waypoints[index].position)<0.3f)
             {
                 index++;
+                if(index<waypoints.Count)
+                    rotate.EnemyRotate(waypoints[index]);
             }
         }
     }

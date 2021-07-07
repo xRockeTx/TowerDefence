@@ -7,10 +7,13 @@ public class BuyOpen : MonoBehaviour
 {
     [SerializeField] private List<Transform> towers;
     [SerializeField] private List<int> towersPrice;
-    [SerializeField] private GameObject buyPanel;
+    [SerializeField] private GameObject buyPanel,statPanel;
     [SerializeField] private Text moneyTxt;
     [SerializeField] private UpgradeTower upTower;
+    [SerializeField] private Text range, cooldown, damage, speed, level, price;
     public int money;
+    private bool click=false;
+    private int lastId;
     private Transform place;
     private void Start()
     {
@@ -20,7 +23,30 @@ public class BuyOpen : MonoBehaviour
     {
         place = placePos;   
     }
-    public void BuildTower(int i)
+    public void OnPlace(int i)
+    {
+        if (click&&i==lastId)
+        {
+            BuildTower(i);
+            click = false;
+        }
+        else {
+            statPanel.SetActive(true);
+            ViewStats(towers[i].gameObject.GetComponent<TowerShoot>());
+            lastId = i;
+            click = true;
+        }
+    }
+    private void ViewStats(TowerShoot tower)
+    {
+        range.text = "Дальность: " + tower.rangeTower[0];
+        cooldown.text = "Время перезарядки: " + tower.cooldownTower[0];
+        damage.text = "Урон: " + tower.upDamage[0];
+        speed.text = "Скорость пули: " + tower.upSpeed[0];
+        level.text = "Уровень: 0";
+        price.text = "Стоимость: " + tower.upgradePrice[0];
+    }
+    private void BuildTower(int i)
     {
         if (towersPrice[i]<=money)
         {
@@ -36,5 +62,11 @@ public class BuyOpen : MonoBehaviour
     {
         money += price;
         moneyTxt.text = money.ToString();
+    }
+    public void Close()
+    {
+        statPanel.SetActive(false);
+        buyPanel.SetActive(false);
+        click=false;
     }
 }

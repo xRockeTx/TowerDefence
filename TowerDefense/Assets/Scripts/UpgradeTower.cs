@@ -16,7 +16,7 @@ public class UpgradeTower : MonoBehaviour
     public void Sell()
     {
         buyOpen=FindObjectOfType<BuyOpen>();
-        buyOpen.ChangeMoney(-price / 2);
+        buyOpen.ChangeMoney(price / 2);
         Destroy(tower.gameObject);
         upPan.SetActive(false);
     }

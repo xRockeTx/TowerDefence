@@ -6,9 +6,8 @@ using UnityEngine.EventSystems;
 
 public class TowerShoot : MonoBehaviour
 {
-    [SerializeField] private List<int> upSpeed, upDamage;
-    [SerializeField] private List<int> upgradePrice;
-    [SerializeField] private List<float> rangeTower, cooldownTower;
+    public List<int> upSpeed, upDamage, upgradePrice;
+    public List<float> rangeTower, cooldownTower;
     [SerializeField] private List<string> tags;
     [SerializeField] private List<float> coef;
     private string enemyTag;
@@ -16,9 +15,15 @@ public class TowerShoot : MonoBehaviour
     public Transform bullet;
     public float range, cooldown, currentCooldown;
     public int price,tier=0,damage,speed;
+    private Transform enemy;
 
     private void Update()
     {
+        if (enemy != null)
+        {
+            transform.GetChild(tier).GetChild(0).LookAt(enemy, Vector3.up);
+            transform.GetChild(tier).GetChild(0).Rotate(-89.98f, 0, 0);
+        }
         if (CanShoot())
         {
             SearchTarget();
@@ -51,6 +56,7 @@ public class TowerShoot : MonoBehaviour
         }
         if (nearestEnemy != null)
         {
+            enemy = nearestEnemy;
             Shoot(nearestEnemy,tags.IndexOf(enemyTag,0));
         }
 

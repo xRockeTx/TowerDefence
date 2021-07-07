@@ -8,6 +8,7 @@ TagManager:
   - Place
   - Normal
   - Strong
+  - FlyEnemy
   layers:
   - Default
   - TransparentFX

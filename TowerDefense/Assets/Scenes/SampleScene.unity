@@ -8810,8 +8810,27 @@ MonoBehaviour:
   - {fileID: 7957035352931582099, guid: bdf061742ba90204bbcd6abcccff5d29, type: 3}
   - {fileID: 7957035352931582099, guid: 881866be855b12d44b67d8220dd891b2, type: 3}
   - {fileID: 6792531568062156060, guid: b546631900606ca4dbdae647128791b8, type: 3}
-  enemyType: 020000000000000001000000020000000100000000000000010000000200000001000000010000000000000002000000010000000000000002000000
-  enemyCount: 030000000500000002000000050000000300000004000000060000000700000008000000050000000a0000000a0000000a0000000a0000000a000000
+  exoWave:
+  - wave: 1
+    count: 8
+    type: 1
+  - wave: 3
+    count: 6
+    type: 2
+  - wave: 4
+    count: 7
+    type: 0
+  Wave:
+  - count: 6
+    type: 0
+  - count: 6
+    type: 0
+  - count: 6
+    type: 1
+  - count: 6
+    type: 1
+  - count: 6
+    type: 2
 --- !u!1 &1922547681
 GameObject:
   m_ObjectHideFlags: 0

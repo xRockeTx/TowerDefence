@@ -22,8 +22,8 @@ public class PlaceTower : MonoBehaviour
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            buyPanel.SetActive(true);
-            buyScr.SetPlace(transform);
+            if(!buyScr.gameObject.GetComponent<UpgradeTower>().upPan.activeSelf)
+                buyScr.SetPlace(transform);
         }
     }
 }

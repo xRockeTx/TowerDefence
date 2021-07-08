@@ -11,7 +11,7 @@ public class UpgradeTower : MonoBehaviour
     private List<int> upgradePrice,bulletDamage,bulletSpeed;
     private List<float> towerRange,towerCooldown;
     private int price,tier;
-    [SerializeField] private BuyOpen buyOpen;
+    public BuyOpen buyOpen;
     private bool click=false;
     public void Sell()
     {

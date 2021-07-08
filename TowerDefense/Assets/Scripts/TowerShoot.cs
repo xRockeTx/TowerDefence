@@ -74,7 +74,8 @@ public class TowerShoot : MonoBehaviour
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            upTower.OpenPan(price, upgradePrice,upSpeed,upDamage, rangeTower, cooldownTower, tier, this);
+            if(!upTower.gameObject.GetComponent<BuyOpen>().buyPanel.activeSelf)
+                upTower.OpenPan(price, upgradePrice,upSpeed,upDamage, rangeTower, cooldownTower, tier, this);
         }
     }
 }

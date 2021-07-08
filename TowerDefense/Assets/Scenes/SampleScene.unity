@@ -8145,8 +8145,8 @@ MonoBehaviour:
   - {fileID: 480436003081622189, guid: 68ef4f5fd806bbb48902fa0ecb0840c2, type: 3}
   - {fileID: 3586778098944699993, guid: 83d2bc3c3a9f96948bc946f885efbda6, type: 3}
   towersPrice: 0f0000001e000000
-  buyPanel: {fileID: 6841630}
   statPanel: {fileID: 948302956}
+  buyPanel: {fileID: 6841630}
   moneyTxt: {fileID: 1970051704}
   upTower: {fileID: 1761538334}
   range: {fileID: 1791692083}
@@ -8823,13 +8823,43 @@ MonoBehaviour:
   Wave:
   - count: 6
     type: 0
-  - count: 6
+  - count: 7
     type: 0
-  - count: 6
+  - count: 9
     type: 1
-  - count: 6
+  - count: 8
     type: 1
-  - count: 6
+  - count: 8
+    type: 2
+  - count: 9
+    type: 2
+  - count: 8
+    type: 1
+  - count: 10
+    type: 1
+  - count: 8
+    type: 0
+  - count: 12
+    type: 2
+  - count: 13
+    type: 1
+  - count: 14
+    type: 2
+  - count: 12
+    type: 1
+  - count: 12
+    type: 2
+  - count: 13
+    type: 0
+  - count: 14
+    type: 2
+  - count: 14
+    type: 0
+  - count: 15
+    type: 2
+  - count: 16
+    type: 1
+  - count: 18
     type: 2
 --- !u!1 &1922547681
 GameObject:
@@ -9560,18 +9590,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.data[0]
-      value: 
-      objectReference: {fileID: 480436003081622189, guid: 68ef4f5fd806bbb48902fa0ecb0840c2, type: 3}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.data[1]
-      value: 
-      objectReference: {fileID: 3586778098944699993, guid: 83d2bc3c3a9f96948bc946f885efbda6, type: 3}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
@@ -9579,14 +9597,10 @@ PrefabInstance:
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
-    - target: {fileID: 1132341706907178492, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: placeTowerMenu
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: upScr
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1132341706907178492, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: pan
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1761538334}
     - target: {fileID: 8455920153098238080, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.75

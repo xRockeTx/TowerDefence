@@ -111,7 +111,6 @@ MonoBehaviour:
   normal: {r: 1, g: 1, b: 1, a: 0}
   enter: {r: 0.6, g: 0.6, b: 0.6, a: 0}
   render: {fileID: 8455920153098238086}
-  tower: {fileID: 480436003081622189, guid: 68ef4f5fd806bbb48902fa0ecb0840c2, type: 3}
-  Tower:
-  - {fileID: 480436003081622189, guid: 68ef4f5fd806bbb48902fa0ecb0840c2, type: 3}
-  - {fileID: 3586778098944699993, guid: 83d2bc3c3a9f96948bc946f885efbda6, type: 3}
+  buyPanel: {fileID: 0}
+  buyScr: {fileID: 0}
+  upScr: {fileID: 0}

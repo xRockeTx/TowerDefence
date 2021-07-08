@@ -7,7 +7,8 @@ public class BuyOpen : MonoBehaviour
 {
     [SerializeField] private List<Transform> towers;
     [SerializeField] private List<int> towersPrice;
-    [SerializeField] private GameObject buyPanel,statPanel;
+    [SerializeField] private GameObject statPanel;
+    public GameObject buyPanel;
     [SerializeField] private Text moneyTxt;
     [SerializeField] private UpgradeTower upTower;
     [SerializeField] private Text range, cooldown, damage, speed, level, price;
@@ -21,6 +22,7 @@ public class BuyOpen : MonoBehaviour
     }
     public void SetPlace(Transform placePos)
     {
+        buyPanel.SetActive(true);
         place = placePos;   
     }
     public void OnPlace(int i)

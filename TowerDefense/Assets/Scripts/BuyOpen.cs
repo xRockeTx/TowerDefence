@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BuyOpen : MonoBehaviour
@@ -8,10 +9,12 @@ public class BuyOpen : MonoBehaviour
     [SerializeField] private List<Transform> towers;
     [SerializeField] private List<int> towersPrice;
     [SerializeField] private GameObject statPanel;
+    [SerializeField] private Transform radius;
     public GameObject buyPanel;
     [SerializeField] private Text moneyTxt;
     [SerializeField] private UpgradeTower upTower;
     [SerializeField] private Text range, cooldown, damage, speed, level, price;
+    private Transform instRad;
     public int money;
     private bool click=false;
     private int lastId;
@@ -41,6 +44,9 @@ public class BuyOpen : MonoBehaviour
     }
     private void ViewStats(TowerShoot tower)
     {
+        instRad=Instantiate(radius);
+        instRad.position = place.position;
+        instRad.localScale = new Vector3(tower.rangeTower[0] * 2, tower.rangeTower[0] * 2, tower.rangeTower[0] * 2);
         range.text = "Дальность: " + tower.rangeTower[0];
         cooldown.text = "Время перезарядки: " + tower.cooldownTower[0];
         damage.text = "Урон: " + tower.upDamage[0];
@@ -50,15 +56,16 @@ public class BuyOpen : MonoBehaviour
     }
     private void BuildTower(int i)
     {
-        if (towersPrice[i]<=money)
+        if (towersPrice[i] <= money)
         {
             money -= towersPrice[i];
             moneyTxt.text = money.ToString();
+            Destroy(instRad.gameObject);
             Transform tmpTower = Instantiate(towers[i]);
             tmpTower.position = place.position;
             tmpTower.GetComponent<TowerShoot>().upTower = upTower;
+            buyPanel.SetActive(false);
         }
-        buyPanel.SetActive(false);
     }
     public void ChangeMoney(int price)
     {
@@ -69,6 +76,10 @@ public class BuyOpen : MonoBehaviour
     {
         statPanel.SetActive(false);
         buyPanel.SetActive(false);
-        click=false;
+        click = false;
+    }
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

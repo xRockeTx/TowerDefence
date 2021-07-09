@@ -56,6 +56,10 @@ public class SpawnEnemy : MonoBehaviour
         }
         canStartWave = true;
         waveCount++;
+        if(waveCount == maxWave)
+        {
+            winPanel.SetActive(true);
+        }
     }
     private void InstantiateEnemy(GameObject enemy)
     {

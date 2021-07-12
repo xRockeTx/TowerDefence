@@ -6,15 +6,18 @@ using UnityEngine.EventSystems;
 
 public class TowerShoot : MonoBehaviour
 {
-    public List<int> upSpeed, upDamage, upgradePrice;
-    public List<float> rangeTower, cooldownTower;
+    public List<Upgrade> upgrade;
+    [SerializeField] private List<CoefficientForEnemy> coefficient;
     [SerializeField] private List<string> tags;
     [SerializeField] private List<float> coef;
+    public List<Transform> allEnemy;
     private string enemyTag;
     public UpgradeTower upTower;
     public Transform bullet;
     public float range, cooldown, currentCooldown;
     public int price,tier=0,damage,speed;
+    public int MaxTier=4;
+    public string Title;
     private Transform enemy;
 
     private void Update()
@@ -43,13 +46,16 @@ public class TowerShoot : MonoBehaviour
         float distance = Mathf.Infinity;
         foreach (string tag in tags)
         {
-            foreach (GameObject enemy in GameObject.FindGameObjectsWithTag(tag))
+            foreach (Transform enemy in allEnemy)
             {
-                float currDistance = Vector3.Distance(transform.position, enemy.transform.position);
-                if (currDistance < distance && currDistance <= range)
+                if (enemy.gameObject.CompareTag(tag))
                 {
-                    nearestEnemy = enemy.transform;
-                    distance = currDistance;
+                    float currDistance = Vector3.Distance(transform.position, enemy.position);
+                    if (currDistance < distance && currDistance <= range)
+                    {
+                        nearestEnemy = enemy;
+                        distance = currDistance;
+                    }
                 }
                 enemyTag = tag;
             }
@@ -75,7 +81,25 @@ public class TowerShoot : MonoBehaviour
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             if(!upTower.gameObject.GetComponent<BuyOpen>().buyPanel.activeSelf)
-                upTower.OpenPan(price, upgradePrice,upSpeed,upDamage, rangeTower, cooldownTower, tier, this);
+                upTower.OpenPan(upgrade,tier, this);
         }
     }
 }
+
+[Serializable]
+public class Upgrade
+{
+    public int Price;
+    public int Range;
+    public float Cooldown;
+    public int BulletDamage;
+    public int BulletSpeed;
+}
+
+[Serializable]
+public class CoefficientForEnemy
+{
+    public string Tag;
+    public float coeficient;
+}
+

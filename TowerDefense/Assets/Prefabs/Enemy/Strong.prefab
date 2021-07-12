@@ -152,7 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7952c70877884f74a9d85db1293b32e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minHP: 30
+  type: 1
+  minHP: 60
   speed: 3
   wayPointParent: {fileID: 0}
   rotate: {fileID: 8282039346285824609}
+  playerBase: {fileID: 0}
+  spawner: {fileID: 0}

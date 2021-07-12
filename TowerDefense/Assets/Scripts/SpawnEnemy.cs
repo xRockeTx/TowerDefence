@@ -10,9 +10,12 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] private Transform waypointsParent;
     [SerializeField] private Text timeToNextSpawn;
     [SerializeField] private List<GameObject> enemy;
+    [SerializeField] private Transform PlayerBase;
+    public List<Transform> allEnemy;
     private int waveCount = 0,maxWave,nextExoWave,exoWaveCount=0;
     private float timeToSpawn = 4;
     private bool canStartWave=true;
+    public bool Win,Lose;
     [SerializeField] private List<ExoWave> exoWave;
     [SerializeField] private List<Wave> Wave;
 
@@ -23,7 +26,7 @@ public class SpawnEnemy : MonoBehaviour
     }
     private void Update()
     {
-        if (waveCount != maxWave)
+        if (waveCount != maxWave&&!Lose)
         {
             if (timeToSpawn <= 0)
             {
@@ -42,6 +45,10 @@ public class SpawnEnemy : MonoBehaviour
     {
         for (int i = 0; i < Wave[waveCount].count; i++)
         {
+            if (Lose)
+            {
+                yield return 0;
+            }
             InstantiateEnemy(enemy[Convert.ToInt32(Wave[waveCount].type)]);
             if (nextExoWave == waveCount)
             {
@@ -66,10 +73,14 @@ public class SpawnEnemy : MonoBehaviour
         Transform tmpEnemy = Instantiate(enemy, transform).transform;
         tmpEnemy.SetParent(transform, false);
         tmpEnemy.position = transform.position;
+        allEnemy.Add(tmpEnemy);
         tmpEnemy.gameObject.GetComponent<WalkEnemy>().SetWaypoints(waypointsParent);
+        tmpEnemy.gameObject.GetComponent<WalkEnemy>().spawner=this;
+        tmpEnemy.gameObject.GetComponent<WalkEnemy>().playerBase = PlayerBase;
         tmpEnemy = null;
     }
 }
+
 [Serializable]
 class ExoWave
 {

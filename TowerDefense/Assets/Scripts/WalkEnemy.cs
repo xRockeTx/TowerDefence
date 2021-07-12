@@ -6,9 +6,17 @@ using UnityEngine;
 
 public class WalkEnemy : MonoBehaviour
 {
+    enum EnemyType
+    {
+        OnlyWalk = 3,
+        Fasted = 1
+    }
+    [SerializeField] private EnemyType type;
     [SerializeField] private int minHP, speed;
     [SerializeField] private Transform wayPointParent;
     [SerializeField] private RotateEnemy rotate;
+    public Transform playerBase;
+    public SpawnEnemy spawner;
     private List<Transform> waypoints = new List<Transform>();
     private int index = 0;
     private float hp = 15;
@@ -46,6 +54,11 @@ public class WalkEnemy : MonoBehaviour
                     rotate.EnemyRotate(waypoints[index]);
             }
         }
+        else if (Vector3.Distance(transform.position,playerBase.position)<=0.5f)
+        {
+            playerBase.GetComponent<PlayerBaseHp>().GetDamage(Convert.ToInt32(type));
+            Destroy(gameObject);
+        }
     }
     public void GetDamage(float damage)
     {
@@ -54,6 +67,7 @@ public class WalkEnemy : MonoBehaviour
         if (hp <= 0)
         {
             FindObjectOfType<BuyOpen>().ChangeMoney(Convert.ToInt32(damage));
+            spawner.allEnemy.Remove(this.transform);
             Destroy(gameObject);
         }
     }

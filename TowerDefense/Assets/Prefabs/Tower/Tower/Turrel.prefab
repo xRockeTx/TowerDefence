@@ -195,36 +195,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba06913894bc67449005f63b9ad7200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upSpeed: 07000000090000000a0000000b0000000c000000
-  upDamage: 0500000007000000090000000c0000000f000000
-  upgradePrice: 0f0000001e0000003c0000005a00000078000000
-  rangeTower:
-  - 2
-  - 2.5
-  - 3
-  - 4
-  - 5
-  cooldownTower:
-  - 0.3
-  - 0.2
-  - 0.15
-  - 0.125
-  - 0.1
+  upgrade:
+  - Price: 15
+    Range: 3
+    Cooldown: 0.5
+    BulletDamage: 5
+    BulletSpeed: 8
+  - Price: 24
+    Range: 4
+    Cooldown: 0.4
+    BulletDamage: 7
+    BulletSpeed: 9
+  - Price: 35
+    Range: 5
+    Cooldown: 0.3
+    BulletDamage: 10
+    BulletSpeed: 10
+  - Price: 50
+    Range: 7
+    Cooldown: 0.25
+    BulletDamage: 12
+    BulletSpeed: 11
+  - Price: 75
+    Range: 8
+    Cooldown: 0.2
+    BulletDamage: 14
+    BulletSpeed: 12
   tags:
   - Normal
   - FlyEnemy
   coef:
   - 1.5
   - 5
+  allEnemy: []
   upTower: {fileID: 0}
   bullet: {fileID: 4939289679354529588, guid: 3ab27125f78a5bf48a5a8897908cec70, type: 3}
-  range: 2
-  cooldown: 0.3
+  range: 3
+  cooldown: 0.5
   currentCooldown: 0
   price: 15
   tier: 0
-  damage: 5
+  damage: 9
   speed: 7
+  MaxTier: 4
+  Title: "\u0422\u0443\u0440\u0435\u043B\u044C"
 --- !u!136 &4227751273604470715
 CapsuleCollider:
   m_ObjectHideFlags: 0

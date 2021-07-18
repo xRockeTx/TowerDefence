@@ -59,6 +59,10 @@ public class UpgradeTower : MonoBehaviour
     }
     private void ViewStats(int lvl)
     {
+        if (instRad.Count != 0)
+        {
+            DestroyRadius();
+        }
         range.text = "Дальность: " + upgradeTower[lvl].Range;
 
         instRad.Add(Instantiate(radius));

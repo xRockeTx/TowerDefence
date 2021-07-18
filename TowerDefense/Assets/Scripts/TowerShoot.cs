@@ -6,11 +6,13 @@ using UnityEngine.EventSystems;
 
 public class TowerShoot : MonoBehaviour
 {
+
     public List<Upgrade> upgrade;
+    [SerializeField] private TowerType towerType;
     [SerializeField] private List<CoefficientForEnemy> coefficient;
     [SerializeField] private List<string> tags;
     [SerializeField] private List<float> coef;
-    public List<Transform> allEnemy;
+    public SpawnEnemy spawner;
     private string enemyTag;
     public UpgradeTower upTower;
     public Transform bullet;
@@ -19,13 +21,14 @@ public class TowerShoot : MonoBehaviour
     public int MaxTier=4;
     public string Title;
     private Transform enemy;
+    private List<Transform> enemies=new List<Transform>();
 
     private void Update()
     {
         if (enemy != null)
         {
-            transform.GetChild(tier).GetChild(0).LookAt(enemy, Vector3.up);
-            transform.GetChild(tier).GetChild(0).Rotate(-89.98f, 0, 0);
+            transform.GetChild(tier).GetChild(0).GetChild(0).LookAt(enemy, Vector3.up);
+            transform.GetChild(tier).GetChild(0).GetChild(0).Rotate(-89.98f, 0, 0);
         }
         if (CanShoot())
         {
@@ -42,39 +45,78 @@ public class TowerShoot : MonoBehaviour
     }
     private void SearchTarget()
     {
-        Transform nearestEnemy = null;
         float distance = Mathf.Infinity;
-        foreach (string tag in tags)
+        switch (Convert.ToInt32(towerType))
         {
-            foreach (Transform enemy in allEnemy)
-            {
-                if (enemy.gameObject.CompareTag(tag))
+            case 1:
+                Transform nearestEnemy = null;
+                foreach (string tag in tags)
                 {
-                    float currDistance = Vector3.Distance(transform.position, enemy.position);
-                    if (currDistance < distance && currDistance <= range)
+                    foreach (Transform enemy in spawner.allEnemy)
                     {
-                        nearestEnemy = enemy;
-                        distance = currDistance;
+                        if (enemy != null)
+                        {
+                            if (enemy.CompareTag(tag))
+                            {
+                                float currDistance = Vector3.Distance(transform.position, enemy.position);
+                                if (currDistance < distance && currDistance <= range)
+                                {
+                                    nearestEnemy = enemy;
+                                    distance = currDistance;
+                                }
+                            }
+                            enemyTag = tag;
+                        }
                     }
                 }
-                enemyTag = tag;
-            }
-        }
-        if (nearestEnemy != null)
-        {
-            enemy = nearestEnemy;
-            Shoot(nearestEnemy,tags.IndexOf(enemyTag,0));
+                if (nearestEnemy != null)
+                {
+                    enemy = nearestEnemy;
+                    Shoot(nearestEnemy, tags.IndexOf(enemyTag, 0));
+                }
+                break;
+            case 2:
+                foreach (string tag in tags)
+                {
+                    if (enemies.Count != 0)
+                    {
+                        foreach (Transform enemy in enemies)
+                        {
+                            Shoot(enemy,tags.IndexOf(tag,0));
+                        }
+                    }
+                    foreach (Transform enemy in spawner.allEnemy)
+                    {
+                        if (enemy != null)
+                        {
+                            if (enemy.CompareTag(tag))
+                            {
+                                float currDistance = Vector3.Distance(transform.position, enemy.position);
+                                if (currDistance < distance && currDistance <= range)
+                                {
+                                    enemies.Add(enemy);
+                                    distance = currDistance;
+                                }
+                            }
+                            enemyTag = tag;
+                        }
+                    }
+                }
+                break;
+            case 3:
+                goto case 1;
         }
 
     }
-    private void Shoot(Transform enemy,int tagIndex)
+    private void Shoot(Transform enemy, int tagIndex)
     {
         currentCooldown = cooldown;
         Transform tmpBullet = Instantiate(bullet);
-        tmpBullet.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+        tmpBullet.position = transform.GetChild(tier).GetChild(0).GetChild(0).GetChild(0).position;
         tmpBullet.GetComponent<BulletFly>().damage = damage;
         tmpBullet.GetComponent<BulletFly>().speed = speed;
-        tmpBullet.GetComponent<BulletFly>().SetTarget(enemy,coef[tagIndex]);
+        tmpBullet.GetComponent<BulletFly>().spawner = spawner;
+        tmpBullet.GetComponent<BulletFly>().SetTarget(enemy, coef[tagIndex]);
     }
     private void OnMouseDown()
     {
@@ -84,6 +126,14 @@ public class TowerShoot : MonoBehaviour
                 upTower.OpenPan(upgrade,tier, this);
         }
     }
+}
+
+enum TowerType
+{
+    Normal = 1,
+    Strong = 1,
+    Tesla = 2,
+    Rocket = 3
 }
 
 [Serializable]

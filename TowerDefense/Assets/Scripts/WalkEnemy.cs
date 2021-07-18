@@ -11,6 +11,12 @@ public class WalkEnemy : MonoBehaviour
         OnlyWalk = 3,
         Fasted = 1
     }
+    enum EnemyMoneyPerKill
+    {
+        OnlyWalk = 4,
+        FlyEnemy = 2
+    }
+    [SerializeField] private EnemyMoneyPerKill money;
     [SerializeField] private EnemyType type;
     [SerializeField] private int minHP, speed;
     [SerializeField] private Transform wayPointParent;
@@ -19,7 +25,7 @@ public class WalkEnemy : MonoBehaviour
     public SpawnEnemy spawner;
     private List<Transform> waypoints = new List<Transform>();
     private int index = 0;
-    private float hp = 15;
+    [SerializeField] private float hp = 15;
     private float hitPoint
     {
         get { return hitPoint; }
@@ -40,6 +46,7 @@ public class WalkEnemy : MonoBehaviour
             waypoints.Add(wayPointParent.GetChild(i));
         }
         rotate.EnemyRotate(waypoints[index]);
+        hp = minHP;
     }
     private void Update()
     {
@@ -56,7 +63,7 @@ public class WalkEnemy : MonoBehaviour
         }
         else if (Vector3.Distance(transform.position,playerBase.position)<=0.5f)
         {
-            playerBase.GetComponent<PlayerBaseHp>().GetDamage(Convert.ToInt32(type));
+            playerBase.GetComponent<PlayerBaseHp>().GetDamage(Convert.ToInt32(type),transform);
             Destroy(gameObject);
         }
     }
@@ -66,7 +73,7 @@ public class WalkEnemy : MonoBehaviour
 
         if (hp <= 0)
         {
-            FindObjectOfType<BuyOpen>().ChangeMoney(Convert.ToInt32(damage));
+            FindObjectOfType<BuyOpen>().ChangeMoney(Convert.ToInt32(money));
             spawner.allEnemy.Remove(this.transform);
             Destroy(gameObject);
         }

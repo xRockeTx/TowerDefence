@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4939289679354529579}
   - component: {fileID: 4939289679354529591}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f06a6dee3013146bb77c77d87cb5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upSpeed: 07000000080000000a0000000b0000000c000000
-  upDamage: 0500000007000000080000000a0000000e000000
-  speed: 7
+  towerType: 1
+  spawner: {fileID: 0}
   damage: 5
+  speed: 7

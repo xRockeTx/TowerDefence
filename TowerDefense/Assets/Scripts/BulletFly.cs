@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
@@ -6,15 +7,17 @@ using UnityEngine.UIElements;
 
 public class BulletFly : MonoBehaviour
 {
+    [SerializeField] private TowerType towerType;
+    public SpawnEnemy spawner;
     public int damage, speed;
-    private Transform target;   
+    private Transform target;
     private float coef;
 
     private void Update()
     {
         Move();
     }
-    public void SetTarget(Transform enemy,float typeNum)
+    public void SetTarget(Transform enemy, float typeNum)
     {
         target = enemy;
         coef = typeNum;
@@ -25,7 +28,34 @@ public class BulletFly : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, target.position) < 0.1f)
             {
-                target.GetComponent<WalkEnemy>().GetDamage(damage*coef);
+                switch (Convert.ToInt32(towerType))
+                {
+                    case 1:
+                        target.GetComponent<WalkEnemy>().GetDamage(damage * coef);
+                        break;
+                    case 2:
+                        goto case 1;
+                    case 3:
+                        List<Transform> enemies= new List<Transform>();
+                        foreach (Transform enemy in spawner.allEnemy)
+                        {
+                            if (enemy != null)
+                            {
+                                float distance = Vector3.Distance(target.position, enemy.position);
+                                if (distance < 2f)
+                                {
+                                    enemies.Add(enemy);
+                                }
+                            }
+                        }
+                        foreach(Transform enemy in enemies)
+                        {
+                            if(enemy!=null)
+                                enemy.GetComponent<WalkEnemy>().GetDamage(damage);
+                        }
+                        target.GetComponent<WalkEnemy>().GetDamage(damage);
+                        break;
+                }
                 Destroy(gameObject);
             }
             else
@@ -34,8 +64,8 @@ public class BulletFly : MonoBehaviour
                 transform.Translate(dir.normalized * Time.deltaTime * speed);
             }
         }
-        else 
-            Destroy(gameObject);     
+        else
+            Destroy(gameObject);
     }
 
 }

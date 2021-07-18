@@ -24,6 +24,10 @@ public class SpawnEnemy : MonoBehaviour
         nextExoWave = exoWave[0].wave;
         maxWave = Wave.Count-1;
     }
+    public void StartSpawnEnemy()
+    {
+
+    }
     private void Update()
     {
         if (waveCount != maxWave&&!Lose)
@@ -92,6 +96,7 @@ enum EnemyType
 {
     normal,
     strong,
+    fast,
     flyEnemy
 }
 [Serializable]

@@ -18,7 +18,7 @@ public class BuyOpen : MonoBehaviour
     private Transform instRad;
     public int money;
     private bool click=false;
-    private int lastId;
+    private int lastId,needTimeId=0;
     private Transform place;
     private void Start()
     {
@@ -66,9 +66,9 @@ public class BuyOpen : MonoBehaviour
             moneyTxt.text = money.ToString();
             Destroy(instRad.gameObject);
             Transform tmpTower = Instantiate(towers[i]);
-            tmpTower.position = place.position;
+            tmpTower.position = new Vector3(place.position.x , 1.075f , place.position.z);
             tmpTower.GetComponent<TowerShoot>().upTower = upTower;
-            tmpTower.GetComponent<TowerShoot>().allEnemy = spawner.allEnemy;
+            tmpTower.GetComponent<TowerShoot>().spawner = spawner;
             buyPanel.SetActive(false);
         }
     }
@@ -86,5 +86,27 @@ public class BuyOpen : MonoBehaviour
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+    public void ChangeTimeScale()
+    {
+        switch (needTimeId)
+        {
+            case 0:
+                Time.timeScale = 0.5f;
+                needTimeId++;
+                break;
+            case 1:
+                Time.timeScale = 0.25f;
+                needTimeId++;
+                break;
+            case 2:
+                Time.timeScale = 0f;
+                needTimeId++;
+                break;
+            case 3:
+                Time.timeScale = 1f;
+                needTimeId=0;
+                break;
+        }
     }
 }

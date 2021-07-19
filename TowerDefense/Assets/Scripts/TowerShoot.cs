@@ -12,6 +12,7 @@ public class TowerShoot : MonoBehaviour
     [SerializeField] private List<CoefficientForEnemy> coefficient;
     [SerializeField] private List<string> tags;
     [SerializeField] private List<float> coef;
+    [SerializeField] private List<Transform> GunPoint, TurelRotate;
     public SpawnEnemy spawner;
     private string enemyTag;
     public UpgradeTower upTower;
@@ -27,8 +28,8 @@ public class TowerShoot : MonoBehaviour
     {
         if (enemy != null)
         {
-            transform.GetChild(tier).GetChild(0).GetChild(0).LookAt(enemy, Vector3.up);
-            transform.GetChild(tier).GetChild(0).GetChild(0).Rotate(-89.98f, 0, 0);
+            TurelRotate[tier].LookAt(enemy, Vector3.up);
+            TurelRotate[tier].Rotate(0, 0, 0);
         }
         if (CanShoot())
         {
@@ -112,7 +113,7 @@ public class TowerShoot : MonoBehaviour
     {
         currentCooldown = cooldown;
         Transform tmpBullet = Instantiate(bullet);
-        tmpBullet.position = transform.GetChild(tier).GetChild(0).GetChild(0).GetChild(0).position;
+        tmpBullet.position = GunPoint[tier].position;
         tmpBullet.GetComponent<BulletFly>().damage = damage;
         tmpBullet.GetComponent<BulletFly>().speed = speed;
         tmpBullet.GetComponent<BulletFly>().spawner = spawner;
@@ -150,6 +151,6 @@ public class Upgrade
 public class CoefficientForEnemy
 {
     public string Tag;
-    public float coeficient;
+    public float Сoeficient;
 }
 

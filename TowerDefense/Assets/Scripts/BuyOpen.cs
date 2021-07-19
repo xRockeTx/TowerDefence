@@ -66,7 +66,7 @@ public class BuyOpen : MonoBehaviour
             moneyTxt.text = money.ToString();
             Destroy(instRad.gameObject);
             Transform tmpTower = Instantiate(towers[i]);
-            tmpTower.position = new Vector3(place.position.x , 1.075f , place.position.z);
+            tmpTower.position = new Vector3(place.position.x , 1f , place.position.z);
             tmpTower.GetComponent<TowerShoot>().upTower = upTower;
             tmpTower.GetComponent<TowerShoot>().spawner = spawner;
             buyPanel.SetActive(false);

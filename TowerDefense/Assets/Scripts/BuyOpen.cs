@@ -10,6 +10,10 @@ public class BuyOpen : MonoBehaviour
     [SerializeField] private List<int> towersPrice;
     [SerializeField] private SpawnEnemy spawner;
     [SerializeField] private GameObject statPanel;
+    public GameObject faston;
+    public GameObject fastty;
+    public GameObject nomal;
+    public GameObject fastfri;
     [SerializeField] private Transform radius;
     public GameObject buyPanel;
     [SerializeField] private Text moneyTxt;
@@ -94,18 +98,34 @@ public class BuyOpen : MonoBehaviour
             case 0:
                 Time.timeScale = 0.5f;
                 needTimeId++;
+                faston.SetActive(true);
+                fastty.SetActive(false);
+                fastfri.SetActive(false);
+                nomal.SetActive(false);
                 break;
             case 1:
                 Time.timeScale = 0.25f;
+                faston.SetActive(false);
+                fastty.SetActive(true);
+                fastfri.SetActive(false);
+                nomal.SetActive(false);
                 needTimeId++;
                 break;
             case 2:
                 Time.timeScale = 0f;
+                faston.SetActive(false);
+                fastty.SetActive(false);
+                fastfri.SetActive(true);
+                nomal.SetActive(false);
                 needTimeId++;
                 break;
             case 3:
                 Time.timeScale = 1f;
-                needTimeId=0;
+                faston.SetActive(false);
+                fastty.SetActive(false);
+                fastfri.SetActive(false);
+                nomal.SetActive(true);
+                needTimeId =0;
                 break;
         }
     }

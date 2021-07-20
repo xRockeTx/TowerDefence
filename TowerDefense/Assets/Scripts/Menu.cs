@@ -7,17 +7,45 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] private GameObject PanelWithLevels,PanelWithSettings;
+ //   [SerializeField] private GameObject PanelWithSettings;
+    [SerializeField] private GameObject PanelWithLevels, menu, setings;
+    /*
+      public void OpenOrCloseLevelPan()
+      {
+          PanelWithLevels.SetActive(!PanelWithLevels.activeSelf);
+      }
+      public void OpenOrCloseSetting()
+      {
+          PanelWithSettings.SetActive(!PanelWithSettings.activeSelf);
+      }
+      */
+    //открытие меню
 
-    public void OpenOrCloseLevelPan()
+    private void Start()
     {
-        PanelWithLevels.SetActive(!PanelWithLevels.activeSelf);
+        Openmenu();
     }
-    public void OpenOrCloseSetting()
+    //меню
+    public void Openmenu()
     {
-        PanelWithSettings.SetActive(!PanelWithSettings.activeSelf);
+        setings.SetActive(false);
+        PanelWithLevels.SetActive(false);
+        menu.SetActive(true);
     }
-
+    //открытие настростроек
+    public void OpenSeting()
+    {
+        setings.SetActive(true);
+        menu.SetActive(false);
+        PanelWithLevels.SetActive(false);
+    }
+     //выбор ур
+    public void Openlevels()
+    {
+        PanelWithLevels.SetActive(true);
+        setings.SetActive(false);
+        menu.SetActive(false);
+    }
     public void GoToLevel(int level)
     {
         SceneManager.LoadScene($"Lvl{level}");

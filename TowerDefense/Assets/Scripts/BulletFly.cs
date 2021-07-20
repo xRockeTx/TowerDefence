@@ -55,6 +55,9 @@ public class BulletFly : MonoBehaviour
                         }
                         target.GetComponent<WalkEnemy>().GetDamage(damage);
                         break;
+                    case 4:
+                        target.GetComponent<WalkEnemy>().ChangeSpeed(0.5f, 3f);
+                        break;
                 }
                 Destroy(gameObject);
             }

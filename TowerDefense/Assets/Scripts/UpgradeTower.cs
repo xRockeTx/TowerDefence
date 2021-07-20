@@ -19,7 +19,7 @@ public class UpgradeTower : MonoBehaviour
     public void Sell()
     {
         buyOpen=FindObjectOfType<BuyOpen>();
-        buyOpen.ChangeMoney(price / 2);
+        buyOpen.ChangeMoney(upgradeTower[tier].Price / 2);
         Destroy(tower.gameObject);
         for (int i = 0; i < instRad.Count; i++)
         {
@@ -90,11 +90,11 @@ public class UpgradeTower : MonoBehaviour
             DestroyRadius();
             tier++;
             tower.tier = tier;
-            tower.price = upgradeTower[tier].Price;
+            /*tower.price = upgradeTower[tier].Price;
             tower.range = upgradeTower[tier].Range;
             tower.cooldown = upgradeTower[tier].Cooldown;
             tower.damage = upgradeTower[tier].BulletDamage;
-            tower.speed = upgradeTower[tier].BulletSpeed;
+            tower.speed = upgradeTower[tier].BulletSpeed; */
             tower.transform.GetChild(tier).gameObject.SetActive(true);
             ViewStats(tier);
         }

@@ -17,8 +17,8 @@ public class TowerShoot : MonoBehaviour
     private string enemyTag;
     public UpgradeTower upTower;
     public Transform bullet;
-    public float range, cooldown, currentCooldown;
-    public int price,tier=0,damage,speed;
+    public float currentCooldown;
+    public int tier=0;
     public int MaxTier=4;
     public string Title;
     private Transform enemy;
@@ -60,7 +60,7 @@ public class TowerShoot : MonoBehaviour
                             if (enemy.CompareTag(tag))
                             {
                                 float currDistance = Vector3.Distance(transform.position, enemy.position);
-                                if (currDistance < distance && currDistance <= range)
+                                if (currDistance < distance && currDistance <= upgrade[0].Range)
                                 {
                                     nearestEnemy = enemy;
                                     distance = currDistance;
@@ -83,7 +83,7 @@ public class TowerShoot : MonoBehaviour
                     {
                         foreach (Transform enemy in enemies)
                         {
-                            Shoot(enemy,tags.IndexOf(tag,0));
+                            Shoot(enemy, tags.IndexOf(tag, 0));
                         }
                     }
                     foreach (Transform enemy in spawner.allEnemy)
@@ -93,7 +93,7 @@ public class TowerShoot : MonoBehaviour
                             if (enemy.CompareTag(tag))
                             {
                                 float currDistance = Vector3.Distance(transform.position, enemy.position);
-                                if (currDistance < distance && currDistance <= range)
+                                if (currDistance < distance && currDistance <= upgrade[0].Range)
                                 {
                                     enemies.Add(enemy);
                                     distance = currDistance;
@@ -106,16 +106,21 @@ public class TowerShoot : MonoBehaviour
                 break;
             case 3:
                 goto case 1;
+            case 4:
+                goto case 2;
         }
 
     }
     private void Shoot(Transform enemy, int tagIndex)
     {
-        currentCooldown = cooldown;
+        currentCooldown = upgrade[0].Cooldown;
         Transform tmpBullet = Instantiate(bullet);
         tmpBullet.position = GunPoint[tier].position;
-        tmpBullet.GetComponent<BulletFly>().damage = damage;
-        tmpBullet.GetComponent<BulletFly>().speed = speed;
+        if (Convert.ToInt32(towerType) == 2)
+            tmpBullet.GetComponent<BulletFly>().damage = upgrade[0].BulletDamage;
+        if (Convert.ToInt32(towerType) == 4)
+            tmpBullet.GetComponent<BulletFly>().damage = 0;
+        tmpBullet.GetComponent<BulletFly>().speed = upgrade[0].BulletSpeed;
         tmpBullet.GetComponent<BulletFly>().spawner = spawner;
         tmpBullet.GetComponent<BulletFly>().SetTarget(enemy, coef[tagIndex]);
     }
@@ -134,7 +139,8 @@ enum TowerType
     Normal = 1,
     Strong = 1,
     Tesla = 2,
-    Rocket = 3
+    Rocket = 3,
+    Slow = 4
 }
 
 [Serializable]

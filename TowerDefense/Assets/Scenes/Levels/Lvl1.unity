@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -290,6 +290,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -297,10 +301,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -380,6 +380,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -387,10 +391,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -470,6 +470,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -477,10 +481,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -640,6 +640,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -647,10 +651,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -730,6 +730,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -737,10 +741,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -925,6 +925,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -932,10 +936,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -1248,6 +1248,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -1255,10 +1259,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -1338,6 +1338,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -1345,10 +1349,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -1432,6 +1432,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -1439,10 +1443,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -1584,6 +1584,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -1591,10 +1595,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -1674,6 +1674,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -1681,10 +1685,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -1764,6 +1764,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -1771,10 +1775,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -1854,6 +1854,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -1861,10 +1865,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -1944,6 +1944,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -1951,10 +1955,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -2369,6 +2369,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -2376,10 +2380,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -2565,6 +2565,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -2572,10 +2576,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -3158,6 +3158,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -3165,10 +3169,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -3248,6 +3248,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -3255,10 +3259,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -3338,6 +3338,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -3345,10 +3349,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -3433,6 +3433,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -3440,10 +3444,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -3591,7 +3591,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &705507995
@@ -3695,6 +3694,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -3702,10 +3705,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -3785,6 +3784,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -3792,10 +3795,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -3875,6 +3874,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -3882,10 +3885,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -4149,6 +4148,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -4156,10 +4159,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -4423,6 +4422,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -4430,10 +4433,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -4857,6 +4856,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -4864,10 +4867,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -4947,6 +4946,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -4954,10 +4957,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -5037,6 +5036,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -5044,10 +5047,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -5206,6 +5205,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -5213,10 +5216,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -5296,6 +5295,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -5303,10 +5306,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -5527,6 +5526,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -5534,10 +5537,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -5617,6 +5616,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -5624,10 +5627,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -5751,7 +5750,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -5839,6 +5837,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -5846,10 +5848,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -6004,6 +6002,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -6011,10 +6013,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -6169,6 +6167,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -6176,10 +6178,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -6304,7 +6302,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -6380,6 +6377,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -6387,10 +6388,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -6470,6 +6467,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -6477,10 +6478,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -6640,6 +6637,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -6647,10 +6648,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -6730,6 +6727,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -6737,10 +6738,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -6864,7 +6861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -7216,6 +7212,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -7223,10 +7223,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -7306,6 +7302,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -7313,10 +7313,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -7396,6 +7392,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -7403,10 +7403,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -7732,6 +7728,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -7739,10 +7739,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -7822,6 +7818,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -7829,10 +7829,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -8069,6 +8065,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -8076,10 +8076,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -8159,6 +8155,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -8166,10 +8166,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -8636,6 +8632,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -8643,10 +8643,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -8726,6 +8722,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -8733,10 +8733,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -8816,6 +8812,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -8823,10 +8823,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -8981,6 +8977,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -8988,10 +8988,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -9154,7 +9150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -9294,7 +9289,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!223 &1761538331
 Canvas:
   m_ObjectHideFlags: 0
@@ -9564,6 +9558,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -9571,10 +9569,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -9720,6 +9714,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -9727,10 +9725,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -9810,6 +9804,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -9817,10 +9815,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -9900,6 +9894,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -9907,10 +9905,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 
@@ -11083,7 +11077,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -11400,6 +11393,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2078357742}
     m_Modifications:
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
+      propertyPath: Tower.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: buyScr
       value: 
       objectReference: {fileID: 1761538333}
@@ -11407,10 +11404,6 @@ PrefabInstance:
       propertyPath: buyPanel
       value: 
       objectReference: {fileID: 6841630}
-    - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
-      propertyPath: Tower.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -4994085964219060062, guid: 7aac78928f8d8b448b9579dd438e2eb9, type: 3}
       propertyPath: Tower.Array.data[0]
       value: 

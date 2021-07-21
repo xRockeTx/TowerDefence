@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
 {
  //   [SerializeField] private GameObject PanelWithSettings;
     [SerializeField] private GameObject PanelWithLevels, menu, setings;
+    [SerializeField] private AudioSource music;
     /*
       public void OpenOrCloseLevelPan()
       {
@@ -45,6 +46,19 @@ public class Menu : MonoBehaviour
         PanelWithLevels.SetActive(true);
         setings.SetActive(false);
         menu.SetActive(false);
+    }
+    public void SettingToggle(int id)
+    {
+        switch (id)
+        {
+            case 1:
+                Debug.Log("music.mute");
+                //music.mute = !music.mute;
+                break;
+            case 2:
+
+                break;
+        }
     }
     public void GoToLevel(int level)
     {

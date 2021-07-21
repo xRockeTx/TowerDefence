@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -30,8 +31,11 @@ public class BuyOpen : MonoBehaviour
     }
     public void SetPlace(Transform placePos)
     {
-        buyPanel.SetActive(true);
-        place = placePos;   
+        if (!buyPanel.activeSelf)
+        {
+            buyPanel.SetActive(true);
+            place = placePos;
+        }
     }
     public void OnPlace(int i)
     {
@@ -83,6 +87,8 @@ public class BuyOpen : MonoBehaviour
     }
     public void Close()
     {
+        if (instRad != null)
+            Destroy(instRad.gameObject);
         statPanel.SetActive(false);
         buyPanel.SetActive(false);
         click = false;
@@ -90,6 +96,12 @@ public class BuyOpen : MonoBehaviour
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void ResetLevel()
+    {
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);    
     }
     public void ChangeTimeScale()
     {

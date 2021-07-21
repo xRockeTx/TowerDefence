@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    [SerializeField] private Advertising advertising;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private Transform waypointsParent;
     [SerializeField] private Text timeToNextSpawn;
@@ -16,6 +17,7 @@ public class SpawnEnemy : MonoBehaviour
     private float timeToSpawn = 4;
     private bool canStartWave=true;
     public bool Win,Lose;
+    [SerializeField] private int level;
     [SerializeField] private List<ExoWave> exoWave;
     [SerializeField] private List<Wave> Wave;
 
@@ -23,10 +25,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         nextExoWave = exoWave[0].wave;
         maxWave = Wave.Count-1;
-    }
-    public void StartSpawnEnemy()
-    {
-
+        //maxWave = 3;
     }
     private void Update()
     {
@@ -69,6 +68,10 @@ public class SpawnEnemy : MonoBehaviour
         waveCount++;
         if(waveCount == maxWave)
         {
+            if (level == 1)
+            {
+                advertising.ShowAdvertising(2);
+            }
             winPanel.SetActive(true);
         }
     }

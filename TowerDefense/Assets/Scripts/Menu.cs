@@ -25,6 +25,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         Openmenu();
+        PlayerPrefs.SetInt("Lose", 0);
     }
     //меню
     public void Openmenu()

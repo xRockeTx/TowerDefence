@@ -461,7 +461,7 @@ MonoBehaviour:
   money: 2
   type: 1
   minHP: 15
-  speed: 5
+  speed: 4
   wayPointParent: {fileID: 0}
   rotate: {fileID: 7108468574666232544}
   playerBase: {fileID: 0}

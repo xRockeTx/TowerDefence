@@ -13,7 +13,7 @@ public class WalkEnemy : MonoBehaviour
     }
     enum EnemyMoneyPerKill
     {
-        OnlyWalk = 4,
+        OnlyWalk = 5,
         FlyEnemy = 2
     }
     [SerializeField] private EnemyMoneyPerKill money;

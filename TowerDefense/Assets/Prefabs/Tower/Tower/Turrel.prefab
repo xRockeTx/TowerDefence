@@ -287,28 +287,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrade:
-  - Price: 15
+  - Price: 25
     Range: 3
     Cooldown: 0.5
     BulletDamage: 5
     BulletSpeed: 8
-  - Price: 24
+  - Price: 30
     Range: 4
     Cooldown: 0.4
     BulletDamage: 7
     BulletSpeed: 9
-  - Price: 35
+  - Price: 38
     Range: 5
     Cooldown: 0.3
     BulletDamage: 10
     BulletSpeed: 10
-  - Price: 50
-    Range: 7
+  - Price: 45
+    Range: 5
     Cooldown: 0.25
     BulletDamage: 12
     BulletSpeed: 11
-  - Price: 75
-    Range: 8
+  - Price: 55
+    Range: 6
     Cooldown: 0.2
     BulletDamage: 14
     BulletSpeed: 12
@@ -335,13 +335,8 @@ MonoBehaviour:
   spawner: {fileID: 0}
   upTower: {fileID: 0}
   bullet: {fileID: 4939289679354529588, guid: 3ab27125f78a5bf48a5a8897908cec70, type: 3}
-  range: 3
-  cooldown: 0.5
   currentCooldown: 0
-  price: 15
   tier: 0
-  damage: 9
-  speed: 7
   MaxTier: 4
   Title: "\u0422\u0443\u0440\u0435\u043B\u044C"
 --- !u!1 &907591685344553344

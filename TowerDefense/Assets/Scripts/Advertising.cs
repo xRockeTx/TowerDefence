@@ -2,28 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
+using UnityEngine.Video;
 
-public class Advertising : MonoBehaviour
+public class Advertising : MonoBehaviour , IUnityAdsListener
 {
     [SerializeField] private BuyOpen buyOpen;
     [SerializeField] private Button addMoney;
+
+    private void Start()
+    {   
+        Advertisement.Initialize("4229895");
+        Advertisement.AddListener(this);
+    }
     public void AddMoney()
     {
-        ShowAdvertising(2);
-        buyOpen.ChangeMoney(40);
-        addMoney.gameObject.SetActive(false);
-    }
-    public void ShowAdvertising(int id)
-    {
-        switch (id)
+        if (Advertisement.IsReady("Rewarded_Android"))
         {
-            case 1:
-                Debug.Log("Видео реклама которую можно пропустить");
-                break;
-            case 2:
-                Debug.Log("Видео реклама без возможности пропустить");
-                break;
-
+            Time.timeScale = 0;
+            Advertisement.Show("Rewarded_Android");
         }
+    }
+    public void ShowAds()
+    {
+        if (Advertisement.IsReady("Interstitial_Android"))
+        {
+            Time.timeScale = 0;
+            Advertisement.Show("Interstitial_Android");
+        }
+    }
+
+    public void OnUnityAdsReady(string placementId)
+    {
+        Debug.Log("Ads are ready");
+    }
+
+    public void OnUnityAdsDidError(string message)
+    {
+        Time.timeScale = 1;
+    }
+
+    public void OnUnityAdsDidStart(string placementId)
+    {
+        Debug.Log("Video started");
+    }
+
+    public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
+    {
+        if (placementId == "Rewarded_Android" && showResult == ShowResult.Finished)
+        {
+            Debug.Log("Rewarded_Android");
+            buyOpen.ChangeMoney(40);
+            addMoney.gameObject.SetActive(false);
+        }
+        Time.timeScale = 1;
     }
 }

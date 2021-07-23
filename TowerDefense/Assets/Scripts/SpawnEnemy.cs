@@ -74,7 +74,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             if (level == 1)
             {
-                advertising.ShowAdvertising(2);
+                advertising.ShowAds();
             }
         }
     }

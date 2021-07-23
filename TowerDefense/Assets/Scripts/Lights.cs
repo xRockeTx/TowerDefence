@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Lights : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Light render;
+    private void Start()
     {
-        
+        if (PlayerPrefs.GetInt("Shadow") == 0)
+        {
+            render.shadows = LightShadows.None;
+        }
+        else
+        {
+            render.shadows = LightShadows.Hard;
+        }
     }
 
     // Update is called once per frame

@@ -57,7 +57,8 @@ public class Menu : MonoBehaviour
                 //music.mute = !music.mute;
                 break;
             case 2:
-
+                Light render = null;
+                render.shadows = 0;
                 break;
         }
     }

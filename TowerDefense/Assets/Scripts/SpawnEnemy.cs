@@ -29,6 +29,10 @@ public class SpawnEnemy : MonoBehaviour
     }
     private void Update()
     {
+        if (waveCount == maxWave&&allEnemy.Count==0)
+        {
+            winPanel.SetActive(true);
+        }
         if (waveCount != maxWave&&!Lose)
         {
             if (timeToSpawn <= 0)
@@ -72,7 +76,6 @@ public class SpawnEnemy : MonoBehaviour
             {
                 advertising.ShowAdvertising(2);
             }
-            winPanel.SetActive(true);
         }
     }
     private void InstantiateEnemy(GameObject enemy)

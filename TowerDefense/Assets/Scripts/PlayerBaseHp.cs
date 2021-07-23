@@ -28,7 +28,7 @@ public class PlayerBaseHp : MonoBehaviour
             Destroy(enemy.gameObject);
             if (lose == 2)
             {
-                advertising.ShowAdvertising(1);
+                advertising.ShowAds();
                 lose = 0;
             }
             else if (lose < 2)

@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,20 +12,12 @@ public class Menu : MonoBehaviour
  //   [SerializeField] private GameObject PanelWithSettings;
     [SerializeField] private GameObject PanelWithLevels, menu, setings;
     [SerializeField] private AudioSource music;
-    /*
-      public void OpenOrCloseLevelPan()
-      {
-          PanelWithLevels.SetActive(!PanelWithLevels.activeSelf);
-      }
-      public void OpenOrCloseSetting()
-      {
-          PanelWithSettings.SetActive(!PanelWithSettings.activeSelf);
-      }
-      */
-    //открытие меню
+    [SerializeField] private List<Toggle> toggles;
 
     private void Start()
     {
+        toggles[0].isOn = Convert.ToBoolean(PlayerPrefs.GetInt("Shadow"));
+        toggles[1].isOn = Convert.ToBoolean(PlayerPrefs.GetInt("Music")); 
         Openmenu();
         PlayerPrefs.SetInt("Lose", 0);
     }
@@ -53,15 +47,18 @@ public class Menu : MonoBehaviour
         switch (id)
         {
             case 1:
-                Debug.Log("music.mute");
-                //music.mute = !music.mute;
+                music.mute = !music.mute;
+                PlayerPrefs.SetInt("Music",Convert.ToInt32(music.mute));
                 break;
             case 2:
-                Light render = null;
-                render.shadows = 0;
+                if(PlayerPrefs.GetInt("Shadow") == 1)
+                    PlayerPrefs.SetInt("Shadow", 0);
+                else
+                    PlayerPrefs.SetInt("Shadow", 1);
                 break;
         }
     }
+
     public void GoToLevel(int level)
     {
         SceneManager.LoadScene($"Lvl{level}");

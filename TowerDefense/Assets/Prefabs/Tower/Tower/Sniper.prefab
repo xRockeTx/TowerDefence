@@ -253,7 +253,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 620bc4c64f4b43e4596fc0d7190ccac1, type: 2}
+  - {fileID: 2100000, guid: 30f88bbef343d594b8042787ac83b798, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -996,13 +996,8 @@ MonoBehaviour:
   spawner: {fileID: 0}
   upTower: {fileID: 0}
   bullet: {fileID: 4939289679354529588, guid: 47960ee83b1ca6947ac042c62ba8e8f7, type: 3}
-  range: 8
-  cooldown: 0.7
   currentCooldown: 0
-  price: 40
   tier: 0
-  damage: 10
-  speed: 20
   MaxTier: 4
   Title: "\u0413\u0430\u0443\u0441"
 --- !u!1 &5579457817614050996

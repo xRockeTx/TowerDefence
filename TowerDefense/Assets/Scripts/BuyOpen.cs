@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class BuyOpen : MonoBehaviour
 {
+    [SerializeField] public GameObject pause;
     [SerializeField] private List<Transform> towers;
     [SerializeField] private List<int> towersPrice;
     [SerializeField] private SpawnEnemy spawner;
@@ -103,11 +104,23 @@ public class BuyOpen : MonoBehaviour
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);    
     }
+
+    public void Pause()     
+    {
+        pause.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void comtini()
+    {
+        pause.SetActive(false);
+        Time.timeScale = 1;
+   }
+
     public void ChangeTimeScale()
     {
         switch (needTimeId)
         {
-            case 0:
+            /*case 0:
                 Time.timeScale = 0.5f;
                 needTimeId++;
                 faston.SetActive(true);
@@ -122,8 +135,8 @@ public class BuyOpen : MonoBehaviour
                 fastfri.SetActive(false);
                 nomal.SetActive(false);
                 needTimeId++;
-                break;
-            case 2:
+                break;*/
+            case 0:
                 Time.timeScale = 0f;
                 faston.SetActive(false);
                 fastty.SetActive(false);
@@ -131,7 +144,7 @@ public class BuyOpen : MonoBehaviour
                 nomal.SetActive(false);
                 needTimeId++;
                 break;
-            case 3:
+            case 1:
                 Time.timeScale = 1f;
                 faston.SetActive(false);
                 fastty.SetActive(false);

@@ -287,27 +287,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrade:
-  - Price: 25
+  - Price: 40
     Range: 3
     Cooldown: 0.5
     BulletDamage: 5
     BulletSpeed: 8
-  - Price: 30
+  - Price: 50
     Range: 4
     Cooldown: 0.4
     BulletDamage: 7
     BulletSpeed: 9
-  - Price: 38
+  - Price: 55
     Range: 5
     Cooldown: 0.3
     BulletDamage: 10
     BulletSpeed: 10
-  - Price: 45
+  - Price: 60
     Range: 5
     Cooldown: 0.25
     BulletDamage: 12
     BulletSpeed: 11
-  - Price: 55
+  - Price: 70
     Range: 6
     Cooldown: 0.2
     BulletDamage: 14

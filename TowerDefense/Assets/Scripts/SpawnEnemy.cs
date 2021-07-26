@@ -12,6 +12,7 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] private Text timeToNextSpawn;
     [SerializeField] private List<GameObject> enemy;
     [SerializeField] private Transform PlayerBase;
+    [SerializeField] private Text WaveCount;
     public List<Transform> allEnemy;
     private int waveCount = 0,maxWave,nextExoWave,exoWaveCount=0;
     private float timeToSpawn = 4;
@@ -25,6 +26,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         nextExoWave = exoWave[0].wave;
         maxWave = Wave.Count-1;
+        //WaveCount.text = "Волна: " + waveCount;
         //maxWave = 3;
     }
     private void Update()
@@ -50,6 +52,7 @@ public class SpawnEnemy : MonoBehaviour
     }
     private IEnumerator SpawnWave()
     {
+        WaveCount.text = "Волна: " + waveCount;
         for (int i = 0; i < Wave[waveCount].count; i++)
         {
             if (Lose)
@@ -98,11 +101,11 @@ class ExoWave
     public int count;
     public EnemyType type;
 }
-enum EnemyType
+public enum EnemyType
 {
-    normal,
-    strong,
-    fast,
+    Normal,
+    Strong,
+    Fast,
     flyEnemy
 }
 [Serializable]

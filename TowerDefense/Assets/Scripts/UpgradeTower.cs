@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class UpgradeTower : MonoBehaviour
 {
+    [SerializeField] private List<Text> enemyText;
     [SerializeField] private Text range, cooldown, level, damage, priceText, speed, title;
     [SerializeField] private Transform radius;
     private List<Transform> instRad=new List<Transform>();
-    public GameObject upPan;
+    public GameObject upPan, damageStatForEnemy;
     private TowerShoot tower;
     private List<Upgrade> upgradeTower;
     private int price,tier;
@@ -30,6 +31,7 @@ public class UpgradeTower : MonoBehaviour
     }
     public void CloseMenu()
     {
+        damageStatForEnemy.SetActive(false);
         DestroyRadius();
         upPan.SetActive(false);
     }
@@ -46,6 +48,40 @@ public class UpgradeTower : MonoBehaviour
             {
                 ViewStats(tier + 1);
                 click = true;
+            }
+        }
+    }
+    public void OpenOrCloseStatForEnemy()
+    {
+        damageStatForEnemy.SetActive(!damageStatForEnemy.activeSelf);
+        if (tower != null)
+        {
+            foreach (CoefficientForEnemy enemy in tower.coefficient)
+            {
+                EnemyType tag = enemy.Tag;
+                int id = 0;
+                if (EnemyType.Normal == tag)
+                {
+                    id = 0;
+                    enemyText[id].text = (enemy.Сoeficient * 100).ToString();
+                }
+                else if (EnemyType.Strong == tag)
+                {
+                    id = 1;
+                    enemyText[id].text = (enemy.Сoeficient * 100).ToString();
+                }
+                else if (EnemyType.Fast == tag)
+                {
+                    id = 2;
+                    enemyText[id].text = (enemy.Сoeficient * 100).ToString();
+                }
+            }
+        }
+        else
+        {
+            foreach (Text text in enemyText)
+            {
+                text.text = "0";
             }
         }
     }

@@ -312,13 +312,14 @@ MonoBehaviour:
     Cooldown: 0.2
     BulletDamage: 14
     BulletSpeed: 100
+  particle: {fileID: 0}
   towerType: 4
   coefficient:
-  - Tag: 
+  - Tag: 0
     "\u0421oeficient": 0
-  - Tag: 
+  - Tag: 1
     "\u0421oeficient": 0
-  - Tag: 
+  - Tag: 2
     "\u0421oeficient": 0
   tags:
   - Normal

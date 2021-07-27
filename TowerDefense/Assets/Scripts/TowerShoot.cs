@@ -8,7 +8,6 @@ public class TowerShoot : MonoBehaviour
 {
 
     public List<Upgrade> upgrade;
-    [SerializeField] private ParticleSystem particle;
     [SerializeField] private TowerType towerType;
     public List<CoefficientForEnemy> coefficient;
     [SerializeField] private List<Transform> GunPoint, TurelRotate;
@@ -51,7 +50,6 @@ public class TowerShoot : MonoBehaviour
             case 1:
                 int id1 = -1;
                 Transform nearestEnemy = null;
-                //Debug.Log(coefficient.Count);
                 foreach (CoefficientForEnemy tagCoef in coefficient)
                 {
                     id1++;
@@ -72,22 +70,18 @@ public class TowerShoot : MonoBehaviour
                             enemyTag = tag;
                         }
                     }
-                    //Debug.Log(id1);
-                    //id1++;
                 }
                 if (nearestEnemy != null)
                 {
                     enemy = nearestEnemy;
-                    //if(id1<2)
-                        Shoot(enemy, id1);
+                    Shoot(enemy, id1);
                 }
                 break;
             case 2:
                 int id2 = -1;
-                Debug.Log(coefficient.Count);
                 foreach (CoefficientForEnemy tagCoef in coefficient)
                 {
-                    id2 = -1;
+                    id2 ++;
                     string tag = tagCoef.Tag.ToString();
                     if (enemies.Count != 0)
                     {
@@ -112,7 +106,6 @@ public class TowerShoot : MonoBehaviour
                             enemyTag = tag;
                         }
                     }
-                    //id2++;
                 }
                 break;
             case 3:
@@ -124,15 +117,18 @@ public class TowerShoot : MonoBehaviour
     }
     private void Shoot(Transform enemy, int tagIndex)
     {
-        if(Convert.ToInt32(towerType) == 2)
-            particle.Play();
         currentCooldown = upgrade[0].Cooldown;
         Transform tmpBullet = Instantiate(bullet);
-        tmpBullet.position = GunPoint[tier].position;
-        if (Convert.ToInt32(towerType) != 4)
+        if (Convert.ToInt32(towerType) != 4&& Convert.ToInt32(towerType) != 2)
+        {
+            tmpBullet.position = GunPoint[tier].position;
             tmpBullet.GetComponent<BulletFly>().damage = upgrade[tier].BulletDamage;
-        if (Convert.ToInt32(towerType) == 4)
+        }
+        if (Convert.ToInt32(towerType) == 4&& Convert.ToInt32(towerType) == 2)
+        {
+            tmpBullet.position = enemy.position;
             tmpBullet.GetComponent<BulletFly>().damage = 0;
+        }
         tmpBullet.GetComponent<BulletFly>().speed = upgrade[0].BulletSpeed;
         tmpBullet.GetComponent<BulletFly>().spawner = spawner;
         tmpBullet.GetComponent<BulletFly>().SetTarget(enemy, coefficient[tagIndex].Сoeficient);

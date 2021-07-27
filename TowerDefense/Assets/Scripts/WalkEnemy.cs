@@ -16,6 +16,7 @@ public class WalkEnemy : MonoBehaviour
         OnlyWalk = 5,
         FlyEnemy = 2
     }
+    [SerializeField] private ParticleSystem Particle;
     [SerializeField] private EnemyMoneyPerKill money;
     [SerializeField] private EnemyTypes type;
     [SerializeField] private float minHP, speed;
@@ -82,5 +83,11 @@ public class WalkEnemy : MonoBehaviour
     public void SetWaypoints(Transform waypointsParent)
     {
         wayPointParent = waypointsParent;
+    }
+    public void PlayParticle(ParticleSystem particle)
+    {
+        Particle = particle;
+        Particle.gameObject.SetActive(true);
+        Particle.Play();
     }
 }

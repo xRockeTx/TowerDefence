@@ -63,4 +63,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene($"Lvl{level}");
     }
+
+    public void QuitTheGame()
+    {
+        Application.Quit();
+    }
 }

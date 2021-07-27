@@ -9,9 +9,7 @@ public class TowerShoot : MonoBehaviour
 
     public List<Upgrade> upgrade;
     [SerializeField] private TowerType towerType;
-    [SerializeField] private List<CoefficientForEnemy> coefficient;
-    [SerializeField] private List<string> tags;
-    [SerializeField] private List<float> coef;
+    public List<CoefficientForEnemy> coefficient;
     [SerializeField] private List<Transform> GunPoint, TurelRotate;
     public SpawnEnemy spawner;
     private string enemyTag;
@@ -50,14 +48,17 @@ public class TowerShoot : MonoBehaviour
         switch (Convert.ToInt32(towerType))
         {
             case 1:
+                int id1 = -1;
                 Transform nearestEnemy = null;
-                foreach (string tag in tags)
+                foreach (CoefficientForEnemy tagCoef in coefficient)
                 {
+                    id1++;
+                    string tag = tagCoef.Tag.ToString();
                     foreach (Transform enemy in spawner.allEnemy)
                     {
                         if (enemy != null)
                         {
-                            if (enemy.CompareTag(tag))
+                            if (enemy.tag==tag)
                             {
                                 float currDistance = Vector3.Distance(transform.position, enemy.position);
                                 if (currDistance < distance && currDistance <= upgrade[0].Range)
@@ -73,24 +74,27 @@ public class TowerShoot : MonoBehaviour
                 if (nearestEnemy != null)
                 {
                     enemy = nearestEnemy;
-                    Shoot(nearestEnemy, tags.IndexOf(enemyTag, 0));
+                    Shoot(enemy, id1);
                 }
                 break;
             case 2:
-                foreach (string tag in tags)
+                int id2 = -1;
+                foreach (CoefficientForEnemy tagCoef in coefficient)
                 {
+                    id2 ++;
+                    string tag = tagCoef.Tag.ToString();
                     if (enemies.Count != 0)
                     {
                         foreach (Transform enemy in enemies)
                         {
-                            Shoot(enemy, tags.IndexOf(tag, 0));
+                            Shoot(enemy, id2);
                         }
                     }
                     foreach (Transform enemy in spawner.allEnemy)
                     {
                         if (enemy != null)
                         {
-                            if (enemy.CompareTag(tag))
+                            if (enemy.tag == tag)
                             {
                                 float currDistance = Vector3.Distance(transform.position, enemy.position);
                                 if (currDistance < distance && currDistance <= upgrade[0].Range)
@@ -115,14 +119,19 @@ public class TowerShoot : MonoBehaviour
     {
         currentCooldown = upgrade[0].Cooldown;
         Transform tmpBullet = Instantiate(bullet);
-        tmpBullet.position = GunPoint[tier].position;
-        if (Convert.ToInt32(towerType) == 2)
-            tmpBullet.GetComponent<BulletFly>().damage = upgrade[0].BulletDamage;
-        if (Convert.ToInt32(towerType) == 4)
+        if (Convert.ToInt32(towerType) != 4&& Convert.ToInt32(towerType) != 2)
+        {
+            tmpBullet.position = GunPoint[tier].position;
+            tmpBullet.GetComponent<BulletFly>().damage = upgrade[tier].BulletDamage;
+        }
+        if (Convert.ToInt32(towerType) == 4&& Convert.ToInt32(towerType) == 2)
+        {
+            tmpBullet.position = enemy.position;
             tmpBullet.GetComponent<BulletFly>().damage = 0;
+        }
         tmpBullet.GetComponent<BulletFly>().speed = upgrade[0].BulletSpeed;
         tmpBullet.GetComponent<BulletFly>().spawner = spawner;
-        tmpBullet.GetComponent<BulletFly>().SetTarget(enemy, coef[tagIndex]);
+        tmpBullet.GetComponent<BulletFly>().SetTarget(enemy, coefficient[tagIndex].Сoeficient);
     }
     private void OnMouseDown()
     {
@@ -136,8 +145,8 @@ public class TowerShoot : MonoBehaviour
 
 enum TowerType
 {
-    Normal = 1,
-    Strong = 1,
+    Turrel = 1,
+    Gause = 1,
     Tesla = 2,
     Rocket = 3,
     Slow = 4
@@ -156,7 +165,7 @@ public class Upgrade
 [Serializable]
 public class CoefficientForEnemy
 {
-    public string Tag;
+    public EnemyType Tag;
     public float Сoeficient;
 }
 

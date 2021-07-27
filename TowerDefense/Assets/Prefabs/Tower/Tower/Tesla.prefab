@@ -341,22 +341,15 @@ MonoBehaviour:
     Cooldown: 0.2
     BulletDamage: 14
     BulletSpeed: 100
+  particle: {fileID: 0}
   towerType: 2
   coefficient:
-  - Tag: 
-    "\u0421oeficient": 0
-  - Tag: 
-    "\u0421oeficient": 0
-  - Tag: 
-    "\u0421oeficient": 0
-  tags:
-  - Normal
-  - Strong
-  - FlyEnemy
-  coef:
-  - 1.5
-  - 5
-  - 5
+  - Tag: 0
+    "\u0421oeficient": 1.5
+  - Tag: 1
+    "\u0421oeficient": 0.5
+  - Tag: 2
+    "\u0421oeficient": 2
   GunPoint:
   - {fileID: 688707005}
   - {fileID: 3436113478012864887}

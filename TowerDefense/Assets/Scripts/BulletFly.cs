@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class BulletFly : MonoBehaviour
 {
     [SerializeField] private TowerType towerType;
+    [SerializeField] private ParticleSystem particle;
     public SpawnEnemy spawner;
     public int damage, speed;
     private Transform target;
@@ -21,22 +22,26 @@ public class BulletFly : MonoBehaviour
     {
         target = enemy;
         coef = typeNum;
+        if(Convert.ToInt32(towerType) == 2|| Convert.ToInt32(towerType) == 4)
+            particle.gameObject.SetActive(true);
     }
     private void Move()
     {
         if (target != null)
         {
-            if (Vector3.Distance(transform.position, target.position) < 0.1f)
+            if (Vector3.Distance(transform.position, target.position) < 0.2f)
             {
                 switch (Convert.ToInt32(towerType))
                 {
                     case 1:
                         target.GetComponent<WalkEnemy>().GetDamage(damage * coef);
+                        Destroy(gameObject);
                         break;
                     case 2:
+                        //target.GetComponent<WalkEnemy>().PlayParticle(particle);
                         goto case 1;
                     case 3:
-                        List<Transform> enemies= new List<Transform>();
+                        List<Transform> enemies = new List<Transform>();
                         foreach (Transform enemy in spawner.allEnemy)
                         {
                             if (enemy != null)
@@ -54,12 +59,14 @@ public class BulletFly : MonoBehaviour
                                 enemy.GetComponent<WalkEnemy>().GetDamage(damage);
                         }
                         target.GetComponent<WalkEnemy>().GetDamage(damage);
+                        Destroy(gameObject);
                         break;
                     case 4:
                         target.GetComponent<WalkEnemy>().ChangeSpeed(0.5f, 3f);
+                        //target.GetComponent<WalkEnemy>().PlayParticle(particle);
+                        Destroy(gameObject);
                         break;
                 }
-                Destroy(gameObject);
             }
             else
             {

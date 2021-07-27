@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class WalkEnemy : MonoBehaviour
 {
-    enum EnemyType
+    enum EnemyTypes
     {
         OnlyWalk = 3,
         Fasted = 1
@@ -16,8 +16,9 @@ public class WalkEnemy : MonoBehaviour
         OnlyWalk = 5,
         FlyEnemy = 2
     }
+    [SerializeField] private ParticleSystem Particle;
     [SerializeField] private EnemyMoneyPerKill money;
-    [SerializeField] private EnemyType type;
+    [SerializeField] private EnemyTypes type;
     [SerializeField] private float minHP, speed;
     private float currentSpeed;
     [SerializeField] private Transform wayPointParent;
@@ -82,5 +83,11 @@ public class WalkEnemy : MonoBehaviour
     public void SetWaypoints(Transform waypointsParent)
     {
         wayPointParent = waypointsParent;
+    }
+    public void PlayParticle(ParticleSystem particle)
+    {
+        Particle = particle;
+        Particle.gameObject.SetActive(true);
+        Particle.Play();
     }
 }

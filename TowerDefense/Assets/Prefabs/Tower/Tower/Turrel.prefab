@@ -273,7 +273,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.1, y: 1, z: 1.1}
-  m_Center: {x: 0, y: -0.75, z: 0}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!114 &1505886905112645318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,14 +312,15 @@ MonoBehaviour:
     Cooldown: 0.2
     BulletDamage: 14
     BulletSpeed: 12
+  particle: {fileID: 0}
   towerType: 1
-  coefficient: []
-  tags:
-  - Normal
-  - FlyEnemy
-  coef:
-  - 1.5
-  - 5
+  coefficient:
+  - Tag: 0
+    "\u0421oeficient": 2
+  - Tag: 1
+    "\u0421oeficient": 1
+  - Tag: 2
+    "\u0421oeficient": 1.5
   GunPoint:
   - {fileID: 7397583406764741849}
   - {fileID: 4246925202643711887}

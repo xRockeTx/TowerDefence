@@ -7,11 +7,12 @@ using UnityEngine.UI;
 
 public class BuyOpen : MonoBehaviour
 {
+    [SerializeField] private List<Text> enemyText;
     [SerializeField] public GameObject pause;
     [SerializeField] private List<Transform> towers;
     [SerializeField] private List<int> towersPrice;
     [SerializeField] private SpawnEnemy spawner;
-    [SerializeField] private GameObject statPanel;
+    [SerializeField] private GameObject statPanel, damageStatForEnemy;
     public GameObject faston;
     public GameObject fastty;
     public GameObject nomal;
@@ -24,8 +25,10 @@ public class BuyOpen : MonoBehaviour
     private Transform instRad;
     public int money;
     private bool click=false;
-    private int lastId,needTimeId=0;
+    private int lastId,needTimeId=0,j=0;
     private Transform place;
+    private TowerShoot Tower;
+
     private void Start()
     {
         moneyTxt.text = money.ToString();
@@ -36,6 +39,40 @@ public class BuyOpen : MonoBehaviour
         {
             buyPanel.SetActive(true);
             place = placePos;
+        }
+    }
+    public void OpenOrCloseStatForEnemy()
+    {
+        damageStatForEnemy.SetActive(!damageStatForEnemy.activeSelf);
+        if (Tower != null)
+        {
+            foreach (CoefficientForEnemy enemy in Tower.coefficient)
+            {
+                EnemyType tag = enemy.Tag;
+                int id = 0;
+                if (EnemyType.Normal == tag)
+                {
+                    id = 0;
+                    enemyText[id].text = (enemy.Сoeficient * 100).ToString();
+                }
+                else if (EnemyType.Strong == tag)
+                {
+                    id = 1;
+                    enemyText[id].text = (enemy.Сoeficient * 100).ToString();
+                }
+                else if (EnemyType.Fast == tag)
+                {
+                    id = 2;
+                    enemyText[id].text = (enemy.Сoeficient * 100).ToString();
+                }
+            }
+        }
+        else
+        {
+            foreach(Text text in enemyText)
+            {
+                text.text = "0";
+            }
         }
     }
     public void OnPlace(int i)
@@ -49,14 +86,17 @@ public class BuyOpen : MonoBehaviour
             statPanel.SetActive(true);
             if(instRad!=null)
                 Destroy(instRad.gameObject);
-            ViewStats(towers[i].gameObject.GetComponent<TowerShoot>());
+            Tower = towers[i].gameObject.GetComponent<TowerShoot>();
+            ViewStats(Tower);
             lastId = i;
             click = true;
         }
     }
     private void ViewStats(TowerShoot tower)
     {
-        instRad=Instantiate(radius);
+        OpenOrCloseStatForEnemy();
+        damageStatForEnemy.SetActive(!damageStatForEnemy.activeSelf);
+        instRad = Instantiate(radius);
         instRad.position = place.position;
         instRad.localScale = new Vector3(tower.upgrade[0].Range * 2, tower.upgrade[0].Range * 2, tower.upgrade[0].Range * 2);
         range.text = "Дальность: " + tower.upgrade[0].Range;

@@ -287,12 +287,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrade:
-  - Price: 15
+  - Price: 70
     Range: 3
     Cooldown: 0.5
     BulletDamage: 5
     BulletSpeed: 100
-  - Price: 24
+  - Price: 75
     Range: 4
     Cooldown: 0.4
     BulletDamage: 7
@@ -312,7 +312,6 @@ MonoBehaviour:
     Cooldown: 0.2
     BulletDamage: 14
     BulletSpeed: 100
-  particle: {fileID: 0}
   towerType: 4
   coefficient:
   - Tag: 0
@@ -321,14 +320,6 @@ MonoBehaviour:
     "\u0421oeficient": 0
   - Tag: 2
     "\u0421oeficient": 0
-  tags:
-  - Normal
-  - Strong
-  - FlyEnemy
-  coef:
-  - 1.5
-  - 5
-  - 5
   GunPoint:
   - {fileID: 688707005}
   - {fileID: 0}
@@ -538,7 +529,7 @@ GameObject:
   - component: {fileID: 1777369164590382104}
   - component: {fileID: 5136232262823940927}
   m_Layer: 0
-  m_Name: Tesla (1)
+  m_Name: Slow(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +611,7 @@ GameObject:
   - component: {fileID: 5918568358346175001}
   - component: {fileID: 8486485775767553747}
   m_Layer: 0
-  m_Name: Tesla
+  m_Name: Slow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

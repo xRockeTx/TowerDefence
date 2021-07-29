@@ -841,32 +841,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrade:
-  - Price: 40
+  - Price: 45
     Range: 8
     Cooldown: 0.7
     BulletDamage: 10
     BulletSpeed: 20
-  - Price: 54
+  - Price: 50
     Range: 10
     Cooldown: 0.65
     BulletDamage: 14
     BulletSpeed: 24
-  - Price: 80
+  - Price: 75
     Range: 11
     Cooldown: 0.6
     BulletDamage: 17
     BulletSpeed: 25
-  - Price: 110
+  - Price: 90
     Range: 12
     Cooldown: 0.6
     BulletDamage: 20
     BulletSpeed: 27
-  - Price: 150
+  - Price: 100
     Range: 15
     Cooldown: 0.5
     BulletDamage: 25
     BulletSpeed: 30
-  particle: {fileID: 0}
   towerType: 3
   coefficient:
   - Tag: 0
@@ -875,14 +874,6 @@ MonoBehaviour:
     "\u0421oeficient": 1
   - Tag: 2
     "\u0421oeficient": 1
-  tags:
-  - Normal
-  - Strong
-  - FlyEnemy
-  coef:
-  - 1.5
-  - 1.5
-  - 1.5
   GunPoint:
   - {fileID: 1297161727323135940}
   - {fileID: 968166203803570889}

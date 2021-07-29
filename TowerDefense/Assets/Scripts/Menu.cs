@@ -9,7 +9,8 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
- //   [SerializeField] private GameObject PanelWithSettings;
+    //   [SerializeField] private GameObject PanelWithSettings;
+    [SerializeField] private GameObject sene;
     [SerializeField] private GameObject PanelWithLevels, menu, setings;
     [SerializeField] private AudioSource music;
     [SerializeField] private List<Toggle> toggles;
@@ -27,6 +28,7 @@ public class Menu : MonoBehaviour
         setings.SetActive(false);
         PanelWithLevels.SetActive(false);
         menu.SetActive(true);
+        sene.SetActive(true);
     }
     //открытие настростроек
     public void OpenSeting()
@@ -34,6 +36,7 @@ public class Menu : MonoBehaviour
         setings.SetActive(true);
         menu.SetActive(false);
         PanelWithLevels.SetActive(false);
+        sene.SetActive(false);
     }
      //выбор ур
     public void Openlevels()
@@ -41,6 +44,7 @@ public class Menu : MonoBehaviour
         PanelWithLevels.SetActive(true);
         setings.SetActive(false);
         menu.SetActive(false);
+        sene.SetActive(false);
     }
     public void SettingToggle(int id)
     {

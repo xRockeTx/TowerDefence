@@ -316,32 +316,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrade:
-  - Price: 15
+  - Price: 60
     Range: 3
     Cooldown: 0.5
     BulletDamage: 5
     BulletSpeed: 100
-  - Price: 24
+  - Price: 70
     Range: 4
     Cooldown: 0.4
-    BulletDamage: 7
+    BulletDamage: 8
     BulletSpeed: 100
-  - Price: 35
+  - Price: 75
     Range: 5
     Cooldown: 0.3
     BulletDamage: 10
     BulletSpeed: 100
-  - Price: 50
+  - Price: 80
     Range: 7
     Cooldown: 0.25
-    BulletDamage: 12
+    BulletDamage: 15
     BulletSpeed: 100
-  - Price: 75
-    Range: 8
+  - Price: 100
+    Range: 20
     Cooldown: 0.2
     BulletDamage: 14
     BulletSpeed: 100
-  particle: {fileID: 0}
   towerType: 2
   coefficient:
   - Tag: 0

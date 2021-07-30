@@ -320,6 +320,8 @@ MonoBehaviour:
     "\u0421oeficient": 1
   - Tag: 2
     "\u0421oeficient": 1.5
+  - Tag: 3
+    "\u0421oeficient": 1
   GunPoint:
   - {fileID: 7397583406764741849}
   - {fileID: 4246925202643711887}

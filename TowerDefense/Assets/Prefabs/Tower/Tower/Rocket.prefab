@@ -874,6 +874,11 @@ MonoBehaviour:
     "\u0421oeficient": 1
   - Tag: 2
     "\u0421oeficient": 1
+<<<<<<< HEAD
+=======
+  - Tag: 3
+    "\u0421oeficient": 2
+>>>>>>> 69f0fc47c008769b25953c1aa39a2a2bef3ac25f
   GunPoint:
   - {fileID: 1297161727323135940}
   - {fileID: 968166203803570889}

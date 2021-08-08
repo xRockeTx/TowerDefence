@@ -337,7 +337,7 @@ MonoBehaviour:
     BulletDamage: 15
     BulletSpeed: 100
   - Price: 100
-    Range: 20
+    Range: 7
     Cooldown: 0.2
     BulletDamage: 14
     BulletSpeed: 100

@@ -289,22 +289,22 @@ MonoBehaviour:
   upgrade:
   - Price: 40
     Range: 3
-    Cooldown: 0.5
+    Cooldown: 0.27
     BulletDamage: 5
     BulletSpeed: 8
   - Price: 50
     Range: 4
-    Cooldown: 0.4
+    Cooldown: 0.25
     BulletDamage: 7
     BulletSpeed: 9
   - Price: 55
     Range: 5
-    Cooldown: 0.3
+    Cooldown: 0.22
     BulletDamage: 10
     BulletSpeed: 10
   - Price: 60
     Range: 5
-    Cooldown: 0.25
+    Cooldown: 0.22
     BulletDamage: 12
     BulletSpeed: 11
   - Price: 70

@@ -951,29 +951,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgrade:
   - Price: 75
-    Range: 8
-    Cooldown: 0.7
-    BulletDamage: 10
-    BulletSpeed: 20
+    Range: 5
+    Cooldown: 0.9
+    BulletDamage: 19
+    BulletSpeed: 25
   - Price: 80
-    Range: 10
-    Cooldown: 0.65
-    BulletDamage: 14
+    Range: 6
+    Cooldown: 0.7
+    BulletDamage: 20
     BulletSpeed: 24
   - Price: 90
-    Range: 11
-    Cooldown: 0.6
-    BulletDamage: 17
+    Range: 6
+    Cooldown: 0.7
+    BulletDamage: 24
     BulletSpeed: 25
   - Price: 110
-    Range: 12
+    Range: 6
     Cooldown: 0.6
-    BulletDamage: 20
+    BulletDamage: 28
     BulletSpeed: 27
   - Price: 120
-    Range: 15
-    Cooldown: 0.5
-    BulletDamage: 25
+    Range: 7
+    Cooldown: 0.65
+    BulletDamage: 30
     BulletSpeed: 30
   towerType: 1
   coefficient:

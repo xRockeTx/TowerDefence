@@ -22,7 +22,7 @@ public class BulletFly : MonoBehaviour
     {
         target = enemy;
         coef = typeNum;
-        if(Convert.ToInt32(towerType) == 2|| Convert.ToInt32(towerType) == 4)
+        if(Convert.ToInt32(towerType) == 4)
             particle.gameObject.SetActive(true);
     }
     private void Move()
@@ -62,7 +62,8 @@ public class BulletFly : MonoBehaviour
                         Destroy(gameObject);
                         break;
                     case 4:
-                        target.GetComponent<WalkEnemy>().ChangeSpeed(0.5f, 3f);
+                        Debug.Log("Do");
+                        target.GetComponent<WalkEnemy>().ChangeSpeed(0.5f);
                         //target.GetComponent<WalkEnemy>().PlayParticle(particle);
                         Destroy(gameObject);
                         break;

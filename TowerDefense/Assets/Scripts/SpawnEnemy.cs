@@ -52,7 +52,7 @@ public class SpawnEnemy : MonoBehaviour
     }
     private IEnumerator SpawnWave()
     {
-        WaveCount.text = "Волна: " + waveCount;
+        WaveCount.text = waveCount.ToString();
         for (int i = 0; i < Wave[waveCount].count; i++)
         {
             if (Lose)
@@ -106,7 +106,7 @@ public enum EnemyType
     Normal,
     Strong,
     Fast,
-    flyEnemy
+    FlyEnemy
 }
 [Serializable]
 class Wave

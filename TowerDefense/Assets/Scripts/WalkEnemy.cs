@@ -69,15 +69,15 @@ public class WalkEnemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void ChangeSpeed(float speedCoef, float time)
+    public void ChangeSpeed(float speedCoef)
     {
         if (speed == currentSpeed)
-            StartCoroutine(Speed(speedCoef, time));
+            StartCoroutine(Speed(speedCoef));
     }
-    private IEnumerator Speed(float speedCoef, float time)
+    private IEnumerator Speed(float speedCoef)
     {
         currentSpeed *= 0.5f;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(1);
         currentSpeed /= 0.5f;
     }
     public void SetWaypoints(Transform waypointsParent)

@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class TowerShoot : MonoBehaviour
 {
-
+    [SerializeField] private ParticleSystem particle;
     public List<Upgrade> upgrade;
     [SerializeField] private TowerType towerType;
     public List<CoefficientForEnemy> coefficient;
@@ -21,6 +21,7 @@ public class TowerShoot : MonoBehaviour
     public string Title;
     private Transform enemy;
     private List<Transform> enemies=new List<Transform>();
+
 
     private void Update()
     {
@@ -87,8 +88,11 @@ public class TowerShoot : MonoBehaviour
                     {
                         foreach (Transform enemy in enemies)
                         {
+                            //particle.size //radius = upgrade[tier].Range * 2;
+                            particle.Play();
                             Shoot(enemy, id2);
                         }
+                        //particle.Stop();
                     }
                     foreach (Transform enemy in spawner.allEnemy)
                     {
@@ -132,6 +136,8 @@ public class TowerShoot : MonoBehaviour
         tmpBullet.GetComponent<BulletFly>().speed = upgrade[0].BulletSpeed;
         tmpBullet.GetComponent<BulletFly>().spawner = spawner;
         tmpBullet.GetComponent<BulletFly>().SetTarget(enemy, coefficient[tagIndex].Сoeficient);
+        //if(enemies.Count==0||Convert.ToInt32(towerType)==2)
+            //particle.Stop();
     }
     private void OnMouseDown()
     {
